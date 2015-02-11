@@ -1,0 +1,2641 @@
+Notes:
+-The Linux version is dynamically compiled under glibc 2.3;
+ if you need statically linked binaries, e-mail jdb1218@hotmail.com
+-The WIN32 version is a console application compiled under MS Visual Studio 97
+-When "Player file is NOT compatiable with previous releases" is listed, a 
+ new age (conqd INIT) MUST be started
+-Message changes are listed
+-Version #s may not always change; check the build date and time
+
+8/17/2005:
+-Increased default titan/emperor armies
+
+5/10/2005:
+-Fix for formation not working
+
+5/2/2005:
+-Reduced casualties when an army attacks itself (per the LOC)
+
+4/8/2005:
+-Fixed bug in conqs/conqaim where messages wouldn't be sent
+
+4/7/2005:
+-Moved global variables to a global.h file
+-Added GPL license text to each *.c and *.h file
+
+1/19/2005:
+-Use strncpy() instead of strcpy when setting last HK time.
+-Adjusted Shield help file
+
+9/28/2004:
+-Fix for not being able to set formations
+
+9/16/2004:
+-Fix for Vampire's guise showing when fleet is defeated
+
+9/10/2004:
+-Fix for Vampire messages not appearing at NYHK
+
+9/7/2004:
+-Fix for conqs adding characters to nick
+
+7/25/2004:
+-Log all validation attempts in player.log
+
+6/28/2004:
+-Added reset agewon
+
+6/23/2004:
+-When specials are reset, messages are turned on by default
+
+5/26/2004:
+-Changed version to 3.16C
+-Validation attempts automatically reset every hour
+-City garrisons have a minimum of 1000 troops
+
+5/6/2004:
+-Show components required in book
+-Show message if search is used on a city
+-Messages changed: 4061 11093-11104
+
+2/13/2004:
+-Reset city money when copper < 50000 or greater than 50 mil
+
+2/5/2004:
+-Fix for king pictures not being shown
+
+4/1/2004:
+-Fix for vampire life drain not updating max. level
+-Fix for vassal losing assets during battles if lord not on same continent
+
+3/26/2004:
+-Fix for leading spaces in commands
+-Re-write compare functions for sorts and searches
+-conqs will try IRC server every 10 seconds
+-Fix for conqs dropping connections on slower IRC servers
+
+3/24/2004:
+-Fix for attacking Emperors crashing conqd
+
+3/18/2004:
+-Show Vampire guises to master
+-Reworded some vassal messages
+-Messages changed: 2065 2067-2069
+
+3/17/2004:
+-Renamed some help files (kname and sname)
+-Modified help for SET command
+
+3/16/2004:
+-Fix for Vassals seeing Vampire's guise when released
+-Show kingdom name when doing a review (message 4343)
+
+3/14/2004:
+-Fix for players being constantly being unprotected
+-Re-write of recv_data
+-Messages changed: 4343
+
+3/13/2004:
+-Fix for Vampire's true nick being shown in battle (surrender)
+
+3/11/2004:
+-Fix for messages being cut off in IRC client
+
+3/10/2004:
+-Renamed nbattle command to engage
+
+3/7/2004:
+-Changed format of review command
+-Messaged added: 63-64
+-Messages changed: 4210 4212-4215 4325
+
+3/5/2004:
+-Fix for kings made with tangent abdicating immediately
+
+2/25/2004:
+-Messages changed: 4061
+
+2/24/2004:
+-Fix for web client
+
+2/21/2004:
+-Emperors get a Mighty Immortal horde in battle
+
+2/20/2004:
+-Fix for no king picture
+
+2/19/2004:
+-Quest characters will always have maximum troops
+-Moved Quest character surrender back to 100%
+-Moved king pictures to conquest.messages
+-Messages added: 22000-22074
+
+2/18/2004:
+-Fix for quest characters not setting steward for win properly
+
+2/12/2004:
+-Fix for allowing players who lose protection to be attacked
+-Fix for Quest character steward not functioning
+
+2/11/2004:
+-Fix for Quest characters not having enough castles
+-Lowered Quest character surrender to 75%
+-Increased base food and copper for Quest characters
+-Changed Quest character army composition to 20%/40%/40%
+-Changed quest_chars option in conqd.conf file
+
+2/10/2004:
+-Vampire's true name will show in review
+
+2/8/2004:
+-Added indication if player in population is validated
+-Messages changed: 4319
+
+2/6/2003:
+-Added warning when trying to validate more then once every 30 seconds
+-Messages changed: 54 6023
+-Fix to allow attacks on questcharacters when not validated
+
+2/4/2003:
+-Titans, demigods, and Emperors unvalidate immediately
+-New demigod command: questchar
+ Creates quest characters at any time
+
+1/22/2004:
+-Changed version to 3.15C
+-Player file is NOT compatiable with previous releases
+-Added support for players only being attacked while validated
+-See restrict_combat option in conqd.conf file
+-Fix for emperors being validated after age init
+-Messages added: 2089
+-Messages changed: 4041 4318
+
+1/13/2003:
+-Fix for titan running help level and bot looping
+-Added maximum # of quest chars to conqd.conf file
+-Possible fix for messages being cut off
+
+11/18/2003:
+-Fix for max move not working in the secret city
+-Initialize memory to zero when using realloc (may fix tavern crash)
+
+10/25/2003:
+-Fix for having the Lord of Chaos and ending up with -10 peasants after NYHK
+
+10/16/2003:
+-Release command checks for a name to be specified
+
+9/5/2003:
+-Fix for steward accepting illegal commands for HK
+
+9/2/2003:
+-Fix for conqs not recognizing nick changes on channel
+-Your ally's hero will only work if you are on the same continent
+-A player with reprieve loses it if they go Vampire
+
+8/31/2003:
+-Do not require ally name in give command
+-Added message if 0 items are discovered
+-Messages added: 5108
+
+8/25/2003:
+-Max command will return what the city has available as maximum you can buy
+-Stop creating QuestChars after total players > 90% max players
+-Minor code cleanups
+
+8/21/2003:
+-Do not send message when 0 items found in vault
+
+8/8/2003:
+-Do not show guise if Vampure uses dust
+
+8/5/2003:
+-Check for vacation before adding up login attempts in validate
+
+7/28/2003:
+-Added message when a player is called to a Crusade
+-Messages added: 3062
+
+7/27/2003:
+-Fix for players on vacation being called to a Crusade
+
+7/26/2003:
+-Check for army size = 0 when picking Crusaders
+-Check for a valid attack when picking Crusaders
+
+7/19/2003:
+-Fix for births/deaths being 0
+
+7/18/2003:
+-Fix for incorrect cost shown for mercenaries
+-Renamed Defense army to Enlisted when advanced_armies is off
+
+7/3/2003:
+-Fix for transfer all command showing help multiple times when advanced 
+ armies are off
+
+6/25/2003:
+-Fix for incorrect (blank) entries on rank
+
+6/17/2003:
+-Fix for conqs not responding to CTCPs
+
+6/12/2003:
+-Fix for move spell putting player in same city
+-Fix for armies being fed/paid twice with advanced_armies off
+-Adjusted unit strengths
+-Lowered total amount of troops per market
+-Units with shield take 20-40% less damage from ranged attacks in any round
+-Messages changed: 4350
+
+6/11/2003:
+-Help for levels, troops, abilities, and structures will work if not validated
+
+6/8/2003:
+-Fix for capturing castles after losing all siege
+
+6/5/2003:
+-New players will not start in the secret city
+-Minor artifact changes
+
+6/3/2003:
+-Changed version to 3.10C
+-Added advanced_armies and allow_formation to conqd.conf file
+
+6/1/2003:
+-Added channel_modes to conqs.conf file
+
+5/30/2003:
+-Replace NOT_USED in conquest.messages file with an error message
+ search for "message error" in file
+
+5/29/2003:
+-Added ability to turn messages on/off with set command
+-Messages changes: 4059-4060
+
+5/26/2003:
+-Fix for being able to teleport into Anti-magic city
+-Fix for incorrect structure output in spy conquest
+
+5/21/2003:
+-Show describe help if command entered incorrectly
+
+5/17/2003:
+-Fix for winsound
+
+5/16/2003:
+-Re-wrote parse_msg function
+
+5/13/2003:
+-When created, cities are given an x,y coordinate on a 10x10 grid
+-To upgrade conquest.city file, email me (or just start a new age)
+-Updated the conquest.tips file
+
+5/10/2003:
+-Fix for bounties collected not being saved
+
+5/9/2003:
+-Added balance command
+-To upgrade conquest.info file, email me (or just start a new age)
+-Changed help commands format
+-Removed describe command; use help describe
+-Messages changed: 4057-4060
+
+5/8/2003:
+-Fix for reset cont not changing city
+-Check for valid items in add_msg function
+-Adjusted the random HK events
+-Capped food and peasants to 100k, copper to 50 million
+-Emperors can cosine without restrictions
+-Messages changed: 6030
+
+5/7/2003:
+-Send done command when players disconnect from conqmud
+
+5/6/2003:
+-Added use_help in conqs.conf to respond to !help on the channel
+-Removed the following commands: abilities, levels, structures, troopinfo
+-Use help command
+-Removed the following commands: autoenlist, color, gender, kname, 
+ sname, surrender, tax, tips, vassalaid, winmsg, winsound
+-Use the set command
+-Messages changed: 53
+-Updated help files
+
+5/5/2003:
+-Modified default tavern names
+
+5/4/2003:
+-Modifed roll's payouts (see help roll)
+-Message changed: 4219
+-You cannot use carpet or move spell to get to anti-magic city
+-Mage cannot use wizardlock on anti-magic city
+-conqs will remove preceeding '=' from host
+
+5/3/2003:
+-Modifed the Roll of Death game; see help roll
+-Added "@" characters to delimint conquest.items file
+-Added item keywords to the item display
+-Messages added: 10090-10091
+-Messages changed: 10006
+
+5/1/2003:
+-Fix for message 4265 having 2 ss
+-Added more comments to conqd.conf file
+-Changed the secret_city and magic_city are defined (see conqd.conf)
+-Added new city options: antimagic_city
+-Messages changed: 2062 10010
+
+4/30/2003:
+-Fix for demote, then auto-promote
+
+4/29/2003:
+-Fix for not being able to remove vacations before they take effect
+
+4/28/2003:
+-Fix for Barbs getting 0 Outposts after abdicating
+
+4/25/2003:
+-Save QuestCharacters after creation
+-Fix for not being able to set formation
+-Enforce castle limits when unloading ships
+
+4/24/2003:
+-Fix for crash during battles
+-Show help with incorrect format for: 
+ bestow buy formation give max transfer vacation
+-Fix for conqs and commands starting with a space
+
+4/21/2003:
+-Change message shown when using max when item isn't sold
+-Messages changed: 54
+
+4/20/2003:
+-Increase initmsg limit in conqs to 256 (nick increased to 64)
+
+4/18/2003:
+-Show help if transfer is issued without an argument
+-Troops can be abbreviated in transfer
+-Added transfer c all <troop type>
+-Added line count verifications for the conquest.artifacts, conquest.heroes, 
+ and conquest.spells files
+
+4/16/2003:
+-conqs will read all servers on startup
+-conqs will re-read conquest.servers file on SIGHUP (Linux only)
+
+4/15/2003:
+-Removed check for soldiers supporting catapults
+
+4/14/2003:
+-Do not show allies or hordes if defender retreats
+
+4/10/2003:
+-A player having a spy, the ninja, or the dagger decreases the odds of espionage
+
+4/9/2003:
+-Increased timeout to 8 seconds
+
+4/8/2003:
+-Added 2 second timeout when receiving data to conqd, conqs, and conqmud
+-The Dragon hero rounds down when determining highest spell level
+
+4/7/2003:
+-Fix for loser's campaign army not being transferred after losing a battle
+-Show when troops are auto-transferred
+-Re-arrange battle output
+-Turn affects the defense army
+
+4/6/2003:
+-Lowered transfer to 1 mp
+
+4/5/2003:
+-Renamed Mage's "Components" ability "Alchemy"
+-Renamed Mage's "Spells" ability "Proficiency"
+
+4/4/2003:
+-When executing commands, Stewards won't move you if on the same continent
+
+4/2/2003:
+-Fix for firecall creating negative troops
+-Added help if you don't specify the correct amount of parameters to disband
+-Disband shows which army you disbanded units from
+-Messages changed: 12000-12001
+
+3/31/2003:
+-Enable disband to work on non-mercs
+-Messages changed: 12007-12008
+
+4/1/2003:
+-Summoned creatures (animal pack, mage spells) were always weak
+
+3/29/2003:
+-Ensure defender fights to the death if capturing last Castle
+
+3/27/2003:
+-Fix for casualty %s displayed over 100%
+-When a Barbarian/Vampire abdicates with 1 kingdom, make random Fighter class
+-Modified siege engine strengths
+
+3/26/2003:
+-Transfer all troops from C to D if defender loses the battle
+-Transfer all C back to D when defending last Castle
+-Fix for map command when only 1 continent
+
+3/25/2003:
+-Allow only one age winner
+
+3/22/2003:
+-Ceasefire shouldn't create a blockade
+-Added reset for continent effects (blockade, ceasefire, blitz)
+
+3/21/2003:
+-Titans can animate troops (like the Vampire)
+-Check for food and copper now includes both armies
+-Quest horde now looks at your campaign army
+-Quest horde was always Weak (doh!)
+
+3/20/2003:
+-Changed default Conquest server to localhost for conqs and conqmud
+
+3/19/2003:
+-Do not truncate host in player record
+-Fix for blitz message 1022
+
+3/17/2003:
+-During naval battles, cargo is more effective on attack ships
+-Increased siege engine attack strengths
+
+3/15/2003:
+-Fix for Blitz message
+
+3/14/2003:
+-Enlist shows total army (not just defense) if you go over Castle limit
+
+3/13/2003:
+-Change rank so you have to have battles won > 0
+
+3/12/2003:
+-Fix for only having one server in the conquest.servers file
+-Axe going off at HK is random (like the tome)
+
+3/11/2003:
+-Allow different levels to be defined for each class
+-Close conquest.classes file after read
+
+3/10/2003:
+-Removed the conquest.contspc, conquest.itmmkt, and conquest.shpmkt files
+-conquest.info file is NOT compatiable with previous releases
+(conquest.save file may still be used; email me for instructions)
+
+3/9/2003:
+-Review shows both C and D armies
+-Messages changed: 4343
+
+3/7/2003:
+-Changed version to 3.05C
+-Player file is NOT compatiable with previous releases
+-Player ship names will be remembered
+-Re-introduced Campaign and Defense (c&d) armies
+-Messages added: 4398-4400
+-Messages changed: 4282 4317 4343 10025
+
+3/6/2003:
+-Fix for markets in secret city not being set
+
+3/5/2003:
+-Renamed troops ability to conditioning
+-If axe goes off at HK, it will use a charge
+-Added blockade notice in fleet command
+-Added % chance you can slip past a blockade
+-Message added: 4397
+
+3/4/2003:
+-Fix for incorrect values in ceasefire, blitz
+
+3/3/2003:
+-Added NOT_USED to conquest.messages files for depreciated message numbers
+-Messages changed: 1003 1010 4041 4318-4319 6006 7009 9004 11049
+ 13023 14007 15015 16009
+-Fix for incorrect message when: using church, quest horde is lost, 
+ attempting to class change to vampire without enough money
+-Added message when blockade/ceasefire will expire
+
+3/1/2003:
+-New King commands cost more then MPs (see help files)
+
+2/28/2003:
+-Added channel messages for blockade, ceasefire ending
+-Messages added: 4396 16027
+
+2/27/2003:
+-A new age MUST be started
+-Version changed to 3.02C
+-New King level commands added:
+-Blitz (Barbarian): all players attacking get a Horde
+-Blockade (Fighter): no one can enter or leave the continent
+-Ceasefire (Ranger): no one can attack on the continent
+-Messages added: 1020-1023 4390-4395 16022-16026
+-Messages changed: 1000 11071 16021
+-Fix for a high level player not being able to invade another continent
+
+2/17/2003:
+-When Conquest revives a hero it will either annouce the hero, give a 
+ vague message, or say nothing
+-Messages added: 8049-8050
+
+2/15/2003:
+-Remove the word "the" from message
+-Messages changed 10004
+
+2/12/2003:
+-You have to have an army to win or defend an attack
+
+2/8/2003:
+-Markets for food and spies will only open in 50% of cities per continent
+-Fix for incorrect surrender message
+-If allow_surrender off and server changes default surrender
+ using surrender command will adjust it to default
+-Specify an alterate IP for conqs
+-Fix for CTCP messages for conqs
+
+2/7/2003:
+-Changed version to 3.01C
+-Autopromote lowered to +2 levels up
+-If allow_surrender is set Quest characters surrender will be 100%
+ If not, surrender will be the default
+
+2/6/2003:
+-New help screens added
+-Default help screen is a file called "help"
+-Moved Ranger tend to level 2
+
+2/4/2003:
+-Fix for coming out of vacation after server restart
+-Fix for seek not be removed from Rangers when Vampire changes guise
+-(No noticeable effect, just for completeness)
+-Added specials line to ninja
+-Removed the word "the" from hero type in conquest.heroes
+-Messages changed: 2008-2009 2011 2020 2036-2037 3052 6011-6012
+-Messages changed: 8004-8009 8012 8019-8021 8023-8027 8031 8037 8043-8045
+-Messages changed: 9016 13010 17039
+
+2/3/2003:
+-New person command format
+-Messages added: 59-62
+-Messages changed: 2076
+
+1/31/2003:
+-Vampires travel at 1/2 MP
+
+1/30/2003:
+-Add log event for begin/end vacation
+-Fix for not being able to set surrender below 50%
+
+1/27/2003:
+-Added reset kingdoms
+
+1/26/2003:
+-Change QuestChar password so stewards work
+-Responses to steward commands placed in log
+-Fix for steward executing commands on continent where player has no kingdom
+-Reset steward commands when you lose a kingdom
+
+1/25/2003:
+-Removed fix from 1/24
+
+1/24/2003:
+-Fix for steward HK commands not executing on each continent
+
+1/23/2003:
+-After two days, heroes have a 40% chance of being revived
+-Each day after they have a +10% chance
+-So day three there is a 50% chance, day 4 a 60% chance, etc.
+
+1/20/2003:
+-Only Emperors defined in the conqd.conf file can revive heroes
+-Heroes are automatically revived sometime after 3 days
+
+1/18/2003:
+-Bug fixes for advanced_combat
+
+1/17/2003:
+-Modify conqmud to send player host for each command
+
+1/16/2003:
+-Added advanced_combat parameter
+-If set, troops are divided into infantry, cavalry, airborne
+-See conqd.conf file for more info
+-Messages added: 4389
+
+1/14/2003:
+-Fix for steward commands when losing a kingdom
+-Fix for viewing steward commands across continents
+-Removed penalty for setting surrender over 50%
+-Added dft_surrender variable in conqd.conf file
+
+1/8/2003:
+-Changed restore_protection variable to sail_protection
+-Added promote_protection variable in conqd.conf file
+
+1/3/2003:
+-Fix for incorrect LOC battle msg when breaking alliance (again)
+
+11/24/2002:
+-Fix for incorrect LOC battle msg when breaking alliance
+
+11/18/2002:
+-Fix for Merchant King message in battle
+
+11/14/2002:
+-Fix for players on vacation being called to a Crusade
+
+10/29/2002:
+-Fix message for capture foreign in game command
+
+10/25/2002:
+-Fix for color
+-Added command delay to DCC messages in conqs
+
+10/21/2002:
+-Fix for use_dns not being set
+
+10/20/2002:
+-Use alt_dccip for host in conqs
+
+10/18/2002:
+-Use alternate IP address as host if specified
+-Added use_dns parameter to conqd.conf
+
+10/16/2002:
+-Added attack delay for slay attempts
+
+10/11/2002:
+-Race definitons are assumed to be a 1-1 ratio
+-If not, when a player class changes, they will be a random race
+
+10/8/2002:
+-Fix for associate_races not being set to 0 if more classes then 
+ continents are defined
+
+10/5/2002:
+-Fix for forget spell
+
+9/18/2002:
+-Added capture_foreign to game command
+
+9/17/2002:
+-Added capture_foreign option to conqd.conf file
+
+9/10/2002:
+-Classes only capture structures of the same type
+-Messages added: 2088
+-Messages changed: 2052-2053
+-Fix for AR creating impossible alliances
+
+9/9/2002:
+-Show cost plus tax in buy message
+-Allow players to buy if honor is > -1000
+
+9/7/2002:
+-Fix for buying components not adding copper to city
+
+9/4/2002:
+-Fix for Rampage showing incorrect number/type Castles destroyed
+
+9/2/2002:
+-Fix for penance not resetting Lord
+-Fix for lifedrain not taking last castle
+
+8/31/2002:
+-Fix for Vampire bestowing non-Vampires
+-Reprieve only works if level <= 3
+-Do not auto promote players coming off HK
+
+8/30/2002:
+-Remove extra lines from conqmud globals
+-Perform reverse lookup of clients in conqmud
+
+8/27/2002:
+-Fix for getting bonus stats when taking last castle
+-Lowered amount of assets Rod grants you
+
+8/26/2002:
+-Fix for not taking land during battle
+-Fix for not taking stats during battle
+-Vampire with the Rod only promotes at NYHK
+
+8/23/2002:
+-For each % over 50% you set surrender, you lose 3% copper in battle
+-Fix for Ninja granting +5 of every asset
+
+8/15/2002:
+-Fix for Hammer granting Barbs two hordes
+
+8/12/2002:
+-Do not show secret city name in mystic
+
+8/11/2002:
+-Changed ambush to allow range damage first round only
+
+8/10/2002:
+-Wish maximums set back to normal
+-Wish success rate based on how much you wish for
+
+8/9/2002:
+-Fix for WIN32 server not opening conquest.info file
+-Check for vacation in nbattle
+
+8/8/2002:
+-Wish checks for negative numbers
+-Halved wish maximums
+-Espionage costs an attack on success only (lamers)
+
+8/7/2002:
+-Clean up global message format in conqmud
+-Allow 1 Castle to be captured if you have Giant and Catapult
+-Show either collected or deserted message for troops
+
+8/6/2002:
+-Change default file permissions
+
+8/5/2002:
+-Fix for classes not recognizing one another
+-Support for multiple artifacts per city and removing an artifact from play
+-Merchant King can receive taxes from cities
+-Ninja can assassinate other heroes
+-Messages added: 8047-8048
+-Messages changed: 4152
+
+8/4/2002:
+-Titans running Divine Intervention only affect other Titans
+
+8/2/2002:
+-Fix for players not being recogized on channel
+-Added seperators for global messages
+
+8/1/2002:
+-Fix for WIN32 conqs not accepting DCC requests
+-Set default surrender to 99%
+-Minimum surrender is 50
+-Added allow_surrender game option
+-Messages added: 4388
+
+
+7/29/2002:
+-Fix for vampire charm
+-Ninja steals 5% more copper in battle
+-Merchant King salvages equipment from battles
+-Alchemist can increase number attacks
+-Messages added: 2087
+
+7/21/2002:
+-Decreased chances for seek and slay by 5%
+
+7/9/2002:
+-Fill ship markets on new age
+-Added fog of war game option
+
+7/8/2002:
+-Added more detail if applications crash
+
+7/6/2002:
+-Added linger option to socket connections
+
+7/5/2002:
+-Fix for Crusade calling ally
+-Added message in conqmud if nick is too long
+-Fix for 2 players with the same nick connected to conqmud
+
+7/3/2002:
+-Expand socket error messages
+
+7/2/2002:
+-Formatted conqmud output for WIN32 telnet
+-Messages changed: 5101
+-Cleanup of help code
+
+7/1/2002:
+-Fix for steward
+-Added dcc_ip and dcc_start_port options to conqs
+-Fix for NICK command not working in conqs
+
+6/30/2002:
+-Added fog_of_war option which hides most battle messages
+
+6/29/2002:
+-Fix for ship names including ship numbers
+-Increased time string for WIN32
+-Fix for conqs responding to channel messages
+
+6/28/2002:
+-Changed version to 3.0C
+-New XML-based communication method between server and clients
+-Clients and servers older then 3.0 will not work with the new method
+-See conquest.api for details
+
+6/26/2002:
+-Working on fix for spy conquest list
+
+6/21/2002:
+-Added MPs to quest list
+-Messages changed: 4241 15007-15013
+-Rangers can use espionage
+-Espionage doesn't cost an attack
+
+6/14/2002:
+-Eye will show if a player is on vacation
+
+6/11/2002:
+-Increased ship inventory to 20; ship markets will only re-stock if qty is <= 5
+
+6/9/2002:
+-Vampires can't be level drained
+
+6/7/2002:
+-Vampires may not aquire the Holy Grail
+-Messages added: 17061
+
+6/4/2002:
+-Fix for Crusade not working for level 6 players
+
+5/10/2002:
+-Fix for mage death after AR
+
+5/2/2002:
+-Reduced maximum ship inventory to 30
+
+5/1/2002:
+-Allow an alternate IP to be specified in the config file for conqmud
+-Added qty to the ship market
+-Messages added: 5106-5107
+-Messages changed: 5007 5102
+
+4/30/2002:
+-Fix for population (again)
+
+4/26/2002:
+-Remove fix for steward from 4/4/2002
+
+4/25/2002:
+-Allow an alternate IP to be specified in the config file for conqd
+
+4/22/2002:
+-More stringent name checking
+
+4/15/2002:
+-Divination and Vision show if player is on vacation
+-Increase message buffer limit
+
+4/7/2002:
+-Don't allow non-printable characters in player name
+-Messages changed: 4160
+
+4/4/2002:
+-Fix for players on vacation being jousted
+-Fix for steward executing commands on wrong continent
+
+3/15/2002:
+-Fix for DP level
+-Add message to conqmud if client IP doesn't resolve through DNS
+
+3/10/2002:
+-If you re-establish a Kingdom, you can change the tax rate
+
+3/6/2002:
+-Fix for internal random player locator
+
+2/19/2002:
+-Added log events for feeding and paying army on boats
+-Show "Vampire" in reprieve list
+
+2/7/2002:
+-Barbarians have a defenseive horde in all battles
+-Mages spells don't take land
+-Queen of Spiders can die during looting
+
+1/9/2002:
+-Fix for incorrect HK time in info
+-Fix for default formation for INIT
+
+1/7/2002:
+-Fix for castles destroyed when the Giant is lost
+
+1/4/2002:
+-Warlock cannot cast spells if defending player has the Orb
+
+12/30/2001:
+-Spying on a player reveals if they are on vacation
+-There is a 1% chance of a mage surviving AR
+
+12/19/2001:
+-Fix for Barbarians and Vampires not being able to buy their quest troop
+
+12/14/2001:
+-Fix for being able to give to anyone once allied
+
+12/4/2001:
+-Tweak default formation
+
+12/1/2001:
+-Set default surrender to 100%
+-Create default formation
+-Messages changed: 4152
+
+11/30/2001:
+-Changed version to 2.90C
+-Player file is NOT compatiable with previous releases
+-Fix for Grail not killing Vampire vassals
+-Retaliation is now 1:1
+-Messages added: 4385-4387
+
+11/28/2001:
+-Holy Grail can kill Vampire minions
+-Vampires can't charm players who are only level 1
+
+11/27/2001:
+-Fix for incorrect message when Vampire hero life drains
+
+11/23/2001:
+-Fix for incorrect level title for Shield
+
+11/22/2001:
+-Fix for random number generator (for real!)
+
+11/20/2001:
+-Auto-promote checks land only
+-Creating quest characters respects player limit
+
+11/19/2001:
+-Fix for battle crash with ally and 2 hordes
+
+11/6/2001:
+-Adjust random number generator
+-Add formation to ally command
+-Messages changed: 2076
+
+10/31/2001:
+-New random number generator
+
+10/11/2001:
+-Fix for negative space left for loading a ship
+
+9/30/2001:
+-Fix for Boulder showing secret city name
+
+9/17/2001:
+-Fix for incorrect msg when Lord of Chaos breaks an alliance
+
+9/13/2001:
+-Fix for invade failing with "You are surely too powerful to attack..."
+
+9/9/2001:
+-Fix for losing Diplomat and alliance remaining
+
+9/1/2001:
+-More code cleanups; update WIN32 versions
+
+8/31/2001:
+-Added class_change setting to conquest.classes file
+-Specifies the abount of copper required to class change
+-Messages added: 17060
+
+8/30/2001:
+-Fix for auto_ar not working
+-Fix for Vampires being charmed
+-Fix for crash on INIT
+
+8/26/2001:
+-Fix for charmed player having wrong title
+
+8/17/2001:
+-Clerics can list Vampire vassals
+-Adjusted animal horde strengths
+
+8/16/2001:
+-Fix for corpsing multiple times
+
+8/14/2001:
+-Summoned creatures don't get hero/artifact bonuses
+-Possible fix for charm crash
+-Fix for new Demi still being a Vassal
+-Fix for levels showing more then class maxlevel
+
+8/5/2001:
+-Rangers can buy items again
+-Added macros for some socket functions
+
+8/4/2001:
+-Fix for incorrect Castle type in msg 11047
+-Added structures command
+-Messages added: 4378-4384
+
+8/3/2001:
+-Vampire master can't be slain while on vacation
+
+8/1/2001:
+-Added conquest.structures file for defining Castles for each class
+-Messages added: 4377
+-Messages changed: 14012
+-Changed version to 2.85C
+-Fix for Level 10 players tithing
+-Fix for demoting with the Rod
+
+7/28/2001:
+-Reset battles_lost to 0 when making a new kingdom
+
+7/26/2001:
+-Made hklog a player command
+-Messages added: 58
+
+7/23/2001:
+-Remove heroes and artifacts on vacation
+
+7/22/2001:
+-Fix for reset vacation not taking the player off vacation
+
+7/12/2001:
+-Allow auto_ar to be turned off via SIGHUP
+
+7/6/2001:
+-Fix for population on different continents showing incorrect titles
+
+7/4/2001:
+-Removed reuirement for punctuation in passwords
+-Messages changed: 4353
+-Added hero death to log
+
+7/3/2001:
+-Changed population output
+-Run population on different continents
+-Messages added: 5103-5105
+-Messages changed: 5061
+
+7/2/2001:
+-Added info to buy ship
+-Messages added: 5101-5102
+-Messages changed: 5006-5007
+
+7/1/2001:
+-Fix for incorrect message for give
+
+6/30/2001:
+-Check player rank for everyone in the battle
+
+6/29/2001:
+-Messages changed: 4374
+-Fix for next HK time wrong in info
+-Fix for conqs not changing topic
+-Allow Vampire web users to change guise correctly
+-Fix for sending an extra . in info message
+
+6/27/2001:
+-Fix for buying troops message
+-Messages added: 4376
+
+6/26/2001:
+-Remove re-seek after slaying Vampire vassal
+-Messages added: 4362-4375
+-Messages changed: 4111
+
+6/24/2001:
+-Vamprie cowl shouldn't affect Vampires
+-Allow web users to change passwords correctly
+
+6/23/2001:
+-Player file is NOT compatiable with previous releases
+-Changed version to 2.80C
+-Added vacation command
+-New items: Emblem Boulder Cowl Vial Wart
+-Messages added: 4355-4361 6032 10070-10089
+
+6/22/2001:
+-Don't show battle lost counter to Vampires
+
+6/21/2001:
+-More graphics to web client
+-Messages added: 57 4354
+
+6/19/2001:
+-Added msg 56 for web clients
+-Make all clients not send message if len = 0
+-conqweb now sends IP of browser
+-Messages added: 56 20000-20006
+-Messages changed 4209 13013 18020
+
+6/17/2001:
+-Added ability to remove parameters from messages
+-Fix for players demoting to strange levels when losing continent
+-Clerics can kill Vampire vassals in battle
+
+6/16/2001:
+-Added message for new log entries
+-Messages added: 55
+-Messages changed: 50
+
+6/15/2001:
+-Fix for charm
+
+6/13/2001:
+-Fix conqweb to work with more web servers
+-Remove case-sensitve username from conqweb
+
+6/12/2001:
+-Released conqweb for Linux; simple web client, doesn't support newplayer
+
+6/11/2001:
+-Messages changed: 4054
+-Lowered odds of lifedrain
+-If you are lifedrained, you keep level + 2 assets
+
+6/7/2001:
+-Fix for receiving negative troops from items
+
+6/6/2001:
+-Fix for Church not giving correct info to Clerics
+
+6/3/2001:
+-Increased tax rates to: 0, 500, 1000, 1500, 2000
+-Increased Quest troop to 50/level on promotion
+-You don't lose food or money on demotion
+-Rewrite of promotion/demotion code
+-Update artifact powers
+-Update describe files for artifacts
+
+6/1/2001:
+-Removed 15 line limit on displaying log
+-Added timezone to date and time for conqs and conqmud
+
+5/31/2001:
+-Fix for casualties over 100%
+
+5/30/2001:
+-Possible fix for incorrect pirate fleets
+
+5/27/2001:
+-New Vassal HK breakdowns: 5% food from vassal / 2% copper from lord
+-Vassals can help in battles: 5% from vassal / 2% from lord 
+-Added new command: vassalaid
+-Messages added: 2081-2086 7027
+-Messages changed: 4163-4164 7003 7011 7013-7016
+
+5/26/2001:
+-Added copyright msg to info
+-Fix for losing a remort upon being killed
+
+5/25/2001:
+-Fix for ally being attacked message
+-Messages changes: 2055
+
+5/24/2001:
+-Slight message revisions
+-Messages changed: 4012 4018 4180 4232 4317 4320 5023
+
+5/23/2001:
+-Added timezone to date and time
+-Added local time to information
+-Fix for describe
+-Fix for possible buffer overrun
+-Fix for weather not showing effects with Necromancer
+
+5/22/2001:
+-Major code cleanups
+-Fix for ninja command core dumping on bad password
+
+5/21/2001:
+-Check ally for hordes in battle
+-Fix for item bug
+-Player file is NOT compatiable with previous releases
+
+5/20/2001:
+-Changed version to 2.75C
+-Added password checker
+-Added lock command for Emperors
+-Time and date of last validation is shown on validate
+-Added item count, locked, and remorts to ninja
+-Messages added: 4353 6031
+-Messages changed: 48
+
+5/19/2001:
+-Must be level 2 to use post
+-Re-arrange enchant spell messages
+
+5/16/2001:
+-Added reset all_items
+-Changed shield to -2/0 on attack, +2/+3 on defend
+-Added castle_price to conf file
+-Increased price of castles to 50k
+
+5/15/2001:
+-Added ability to cosine view stats
+-Messages changed: 6001-6004
+-Fix for duplicate lines in post
+-Fix for AR affecting Vampire Master with the Orb
+
+5/14/2001:
+-Added post command
+-Messages added: 4352
+-Added reset rank
+-Fix for crash with 2+ hordes
+
+5/13/2001:
+-Fix for dismiss
+-Spells that take assets (earthquake, meteorstorm, etc)
+ must follow attack rules
+-Cleanup of item code
+-Reduce ship speeds
+
+5/12/2001:
+-Strength should not cost an attack
+
+5/11/2001:
+-Fix for newplayer list command
+-Added globals command to conqmud to toggle global messages
+-Added intro2 command to conqmud to show intro2
+-Changed conquest.intro2 file for conqmud
+-Changes to hero, artifact bonuses
+-Fix for opening unrestricted markets
+-Fix for not opening Vampire siege engine markets
+-Undead troops receive no bonuses except weather
+-Sail command cost 2 mps plus the highest speed
+-Increased saving throw % by 10%
+-Changed version to 2.70C
+-Added message in log for lifedrain
+-Vampire hero can lifedrain
+-Removed lifedrain from Destroyer hero
+
+5/9/2001:
+-Vampire vassals don't offer gifts
+-HK, vassal code cleanups
+-Fix for duplicate message with eye
+-Minor bugs with penance fixed
+-Clean up some vassal code
+
+5/7/2001:
+-Fix for QuestChar stewards
+-Bishop tithes as level 6 Cleric
+-Changed tithe rates to 50k + 20k * level for Cleric
+-60k + 25k * level for Ranger
+-Reduced BloodLust to 2, 3, 4 levels down
+
+5/6/2001:
+-When you abdicate, receive 1-3% of assets
+-Fix for lifedrain
+-Added castle_land to config file
+-Code cleanups
+-Increased default surrender to 50%
+-Turn off auto-enlist by default
+
+5/5/2001:
+-Added random tavern message for auto-ar
+-Messages added: 11117
+-Don't allow HK command in steward string
+-Fix for Emp event command
+-Typo fixed in msg 10019
+-Fix for Ranger Tend
+-Cap food to 50k
+-Clean up of event code
+
+5/4/2001:
+-AR will give quest troops
+
+5/3/2001:
+-Fix for incorrect message for berserk
+-Code cleanups, hero changes
+-Add ship type to message
+-Messages changed: 5020
+-Make all Emperors behave like the 1st
+-Demi-gods are immune to Kraken
+
+5/2/2001:
+-Make wand of fire have 5 charges
+-Changed Chieftains back to swm
+
+5/1/2001:
+-Ignore defense weather effects for siege engines
+-Only need food when loading ships, not sailing
+
+4/30/2001:
+-Make crusade message more specific
+-Messages changed: 3005
+-Hero changes: Bishop, Merchant King
+
+4/29/2001:
+-Changed Titan hero to destroy 20-50% Castles on leaving
+-Messages added: 8046
+-Added Barbarian ability, BloodLust
+-Changed Fighters troops ability to 2-4-6
+-Added Ranger ability, Preserve
+-Clerics must slay all Vampire vassals first
+-Clerics receive 50% of Vampire's assets on all continents
+-Message changes: 17008 17022 17034 17037 17046
+
+4/28/2001:
+-Level 10 players immune to Ritual
+-Fix for avalanche message
+-Messages changed: 5096
+-Vampire hero protects from Ritual
+-Fix for unload after invade
+
+4/27/2001:
+-Added Ritual ability for vampires
+-Don't show guise in most spy/espionage messages
+-Fix for destroy not costing MPs
+-Added legend to troopinfo
+-Messages added 4344-4351 17052-17058
+-Fix for weather mod
+
+4/22/2001:
+-Fix for feeding/paying troops on ships
+-Weather mod changes
+-Changes in item prices: Banner, Letter, Call, Flag
+
+4/21/2001:
+-Vampire can't charm you to use steward
+-Fix item count when blown off course
+-All quest tops can be bought in Secret City
+-Changed Generals to Order and Chaos
+-Fix for reset items message
+-Fix for camouflage showing a BG total
+-Updated Barbarian, Ranger help commands
+
+4/20/2001:
+-Changed Generals to +1/+2 or +1/+2 for BloodGuards
+-Added mode of transportation to troop abilities
+
+4/18/2001:
+-Fix for Titan hero not showing in heroes command
+
+4/16/2001:
+-Changed White Knight to +1/+2 Knights
+
+4/15/2001:
+-New hero: Titan
+-Increased Blade to +1/+1
+-Increased Generals to +1/+2
+-Troop changes: Barbarian
+-Slay counts as an attack
+-Slay looks at Vampire's top level
+-New weather system
+-Messages added: 8045 9053-9060
+-Messages changed: 18000-18024
+
+4/13/2001:
+-Added new heroes: Mercenary General, Merchant King, Bishop
+-Messages added: 8044
+-Fix for open market message
+
+4/12/2001:
+-Item changes:
+ Destroy costs 3 mp
+ New items: Siren's Song, Letter of Marque, Banner of the Warlord,
+ Shield of the Wind, White Flag of Cowardice
+ Changed items: Axe, Tome
+-Messages added: 10064-10069
+-Removed ability of Vampires to travel at 1/2 MP cost
+
+-Mages can't be excommunicated
+
+4/11/2001:
+-Added 5000 * level copper charge for stewards
+-Messages added: 4340-4342
+-Added 5000 * level copper charge for stewards
+-Messages added: 4340-4342
+-Messages changes: 4335-4339
+
+4/10/2001:
+-Fix for conqmud re-using socket
+-Added stewards
+-Messages added: 4333-4339
+-Player file is NOT compatiable with previous releases
+
+4/10/2001:
+-You must be level 2 to set bounties
+-Add quest troop for each class (except Vampire) to Secret City
+-Removed Barbs sailing from any city ability
+
+4/8/2001:
+-Changed Cleric BGs to Zealots and Mage BGs to GOlems
+-Trumpets only work for Fighters
+-Messages added: 3061 11116
+-Messages changed: 32 2016 16020
+-Messages removed: 16022
+
+4/6/2001:
+-Fix for setting HK to midnight
+-Updated troop descriptions
+-Fix for round counter
+-Capped battles to 30 days
+-Show what day it is in on channel casualty report
+-Messages added 2079-2080
+
+4/5/2001:
+-Made non-cleric BGs 10/12,shd
+-Added new ability for Fighters: Call-to-Arms
+-Messages added: 9052 11115
+
+4/4/2001:
+-Added new troop ability: ambush
+-Added class abilities
+-Added new abilities command
+-Messages added: 4331-4332
+-Rangers can summon at level 3
+
+4/3/2001:
+-Renamed "Viking Leader" to "Barbarian Leader"
+
+4/2/2001:
+-Fix for penance with Necromancer
+-Clerics only get Horde if attacked by Barb/Vamp at levels 1-3
+
+4/1/2001:
+-Reduced some message verbage
+-Messages changed: 4180 4192 4231-4232
+3/31/2001:
+-Troop modifications: FireElemental, Chiefton, Wraith, SkeletalKnight
+-Hordes won't count ally if friendly
+-Don't show Barb, Ranger, or Vampire quest troop in SC
+
+3/30/2001:
+-Added quest troops for Barbarian and Vampire
+-Message added: 15043-15045
+
+3/26/2001:
+-Fix for rank not removing Demis
+
+3/22/2001:
+-Removed SIGUSR1 & SIGUSR2;
+ use SIGHUP to read both messages and conf file
+
+3/20/2001:
+-Fix for emp_password
+-Release all vassals at AR
+
+3/19/2001:
+-Fix for attacks made after remort
+-Fix for setting bounty
+
+3/16/2001:
+-Increased Ranger MasterArchers to 6/6
+-Changes to combat:
+ non-rng troops do 1-n damage, rng troops do 0-n damage
+ where n is their total attack
+
+3/15/2001:
+-Fix for Alchemist removing all items at HK
+
+3/14/2001:
+-conqs attempt to change nick immediately
+-Log change nick command to emp.log
+-Added emp_password to conqd.conf file
+
+3/13/2001:
+-Changed fs to rng
+-Rng troops do 0-n damage, where n is their attack value
+-Added Guardian help for level 1 Rangers
+-Messages added: 16022
+
+3/10/2001:
+-Add msg for life drain
+
+3/9/2001:
+-Increased item decay
+-Increased chance of misfire per rank
+
+3/8/2001:
+-All Emp/Demi login attempts are logged
+
+3/6/2001:
+-Move bounty file on age INIT
+
+3/5/2001:
+-Fix for Alchemist creating items at NYHK
+-Issue dcc chat immediately
+
+*** Only Linux version updated after this point ***
+
+2/9/2001:
+-Fix for spy showing SC name
+-Clerics may only excommunicate same side
+-Hero effects only occur when attacking
+-There is a chance of hero death if your ally attacks
+
+2/6/2001:
+-Fix for negative peasants
+-Fix for bounties not being paid
+-Barbarian berserk affects all troops
+
+2/4/2001:
+-Set minimum bounty to 10k
+-When setting bounty, a global message is sent.
+-Removed restrictions on {}, [], and () in names, messages, etc.
+-Made bounties continent specific
+-Titans may not set bounties
+
+2/3/2001:
+-New command: bounty
+ Allows you to put a price on someone's head
+-Added message for Alchemist not creating any items
+-Messages added: 8043 19000-
+-Fix for crash in conqs with check_dns and newplayers
+
+2/2/2001:
+-Added check_dns option to conqs.conf file
+-Changes to swarm: >= 1000 +1, >= 2000 +2, >= 4000 +3
+-Allow conqs, conqmud connections from non-local hosts
+-You need 50 peasants per castle to generate taxes
+-Cleanup of code to find random item, player, or ship
+
+2/1/2001:
+-Force binding to port (no more "address in use" errors)
+-Corpse will reset your reprieve protection
+
+1/31/2001:
+-Barbs get small bonus to peasant birth rates
+-Added inactivity timeout to conqmud of 30 minutes
+-Increased effectiveness of shield ability
+
+1/30/2001:
+-Added chance of failure for enchant (lame mages)
+-Rangers can't buy items (heh-heh)
+
+1/28/2001:
+-Rangers can buy items
+-Clerics can't use Thieves Tools
+-New levels for Ranger commands:
+ Vision:1 Tend:2 Shield:3 Summon:4 Commune:5
+-Adjusted Ranger units slightly
+-Added new Ranger troop type in lieu of BloodGuards
+-Messages added: 16020-16021
+-Fix for buying non-existent troops in markets with empty slots
+-Fix for not being able to change server port in conqmud.conf
+-Added class parameter to weather
+
+1/27/2001:
+-Fix for incorrect reprieve for QuestChars
+-Linux version only:
+ Sending SIGUSR1 to conqd, conqmud, or conqs will re-read messages file
+ Sending SIGUSR2 to conqd will re-read parts of conqd.conf file
+-Fix for mystic in cities without an artifact
+-Tithe happens at class change and HK only
+-Potion of Speed gives 10-20 MPs each use
+-Auto-enlist, strength, bless, and shield are continent based
+-Shield may be used at level 4, costs 10 MPs, and grants -1/+3 bonus
+-Bless may be used on self or others
+-Show battles lost when reprieve is on in review
+-Messages changed: 3001-3002
+-Messages added: 3060 4325
+
+1/26/2001:
+-Possible fix for formation bug
+-Reset to default formation when using reset class
+-Fix for conqs dropping dcc messages
+-Fix for 1st Emperor reflecting spell message
+-Fix for a vassals ally attacking lord
+-New Barb attack limits: level 1-3:5 4-6:10 7+:15
+
+1/25/2001:
+-Added remort total to rank
+-Messages changed: 32 4204-4207 10007 13000
+-Messages deleted: 16007 (duplicate)
+
+1/22/2001:
+-Added text description for win32 socket errors
+-Network code cleanup
+
+1/21/2001:
+-Fix for all newplayers starting on continent 1
+
+1/20/2001:
+-Show real player name in vassals command
+-Undead troops won't receive honor bonus
+
+1/18/2001:
+-Only troops which need food at HK, need food to sail
+-Items can be bought for 1 MP
+-Added new Shield ability (reduce 1st round damage by 20%)
+
+1/17/2001:
+-Items with cost < 0 can't be bought or sold
+-Spies will report player movements
+-Messages added: 4321-4324
+
+1/16/2001:
+-Vampire doesn't get reprieve
+-Vassals command shows assets if Lord requests
+
+1/15/2001:
+-Fix for Connection Reset by Peer when changing nicks
+-Added port # to conquest.servers file for conqs
+-Added continent parameter to conquest.classes file
+
+1/14/2001:
+-Vampire can't charm you to buy a sceptre
+
+1/13/2001:
+-Update of help commands
+
+1/12/2001:
+-Items in markets may decay
+-Honor bonus/penalty for low/high tax rates at NYHK
+-Show +0/+1 bonus defenders get in review
+
+1/10/2001:
+-Fix for quiver and trumpet
+-Ally can now take a continent name as a parameter
+-A -1/-1 penalty for low honor has been added
+-A +1/+1 (max +2/+2) bonus has been added for high honor
+
+1/9/2001:
+-Added new options to game command
+-Included conquest.api file to describe communication protocol
+
+1/08/2001:
+-Added attack_reprieve and restore_protection options to config
+
+1/07/2001:
+-Item changes:
+ Increased cow , builders, trumpet, and thieves effect
+ Changed base price of several items
+ Items which add troops check for Castle limits
+ Tithe after selling and using items
+ Messages changed: 10019 10021
+
+1/04/2001:
+-Better sort for rank
+
+1/02/2001:
+-A player may only be attacked in 1 HK as many times as they can attack
+-Increased delay between attacks to 15 seconds
+-Increased # of attacks for Barbarian to 15
+-Player file is NOT compatiable with previous releases
+-Message added: 2078
+***Updated version to 2.60C***
+-Do not show items that can't be sold in buy/sell item
+-Fix for Dukes not getting all swarm
+-Messages changed: 10053-10054
+
+1/01/2001:
+-Fix for non-existant ship bug
+-Ensure only valid troops get bonuses
+-Added Fighter troop abilities:
+ Level 2: +0/+1 to all troops
+ Level 5: +1/+0 to all troops
+ Level 8: swarm to all troops
+-Cost 2 mp * level to buy items
+-Can set whether item can be sold in conquest.items file
+-Messages added: 10063
+
+12/31/2000:
+-Vampire vassals with a remort can charm after level 7
+-Rangers can't buy items
+-Modified food calculation tolerance
+-You can now buy/sell items
+-messages added: 10052-10062
+-You must have food to sail
+-Fix for unload with negative amount bug
+-Removed fs from Wyverns
+
+12/29/2000:
+-Do not show Vampire guise in Lure or surrender
+
+12/26/2000:
+-Adjusted Vampire troops
+-Ensure Vampire vassals aren't released
+-New ship types: attack and cargo
+ attack ships fight first in naval battles
+
+12/24/2000:
+-You must be in the port city to sell ships
+
+12/22/2000:
+-Adjusted Barbarian troops
+-Barbarians can sail from any city
+-Added sell ship
+-Messages added: 5094-5098
+
+12/21/2000:
+-Reset formation after AR
+
+12/20/2000:
+-New display for vassals
+-Messages changed: 7024-7026
+-Fix for Warlock message during battle
+
+12/19/2000:
+-Fix for hordes not showing
+-Do not allow invalid troops to be given
+
+12/18/2000:
+-Changed MountedArchers to 3/5,fs
+-Fighter land & peasant totals increased based on sum of all vassals
+-Fix for Warlock message during battle
+-Fix for weather message
+-Messages changed: 18010
+
+12/16/2000:
+-conqs will ignore ping and ctcp version floods
+
+12/15/2000:
+-Fix for buy max components crash
+
+12/14/2000:
+-Added reset formation
+
+12/13/2000:
+-Fix for crash during sail/nbattle
+-Spies show enemy fleets
+-Show player fleet in ninja
+-Don't say the Vampire consumes a player's soul if they have more then
+ 1 kingdom left
+-Messages changed: 5092 17015
+
+12/12/2000:
+-Show continent name when remorting
+-Messages changed: 9051
+-Fix for not showing what components are needed to cast a spell
+
+12/10/2000:
+-Fix for fleet being blown off course and not receiving gift (for real)
+-Fix for not receiving correct formation when using ninja
+-Bow of Accuracy prevents misfires
+
+12/9/2000:
+-Fix for fleet being blown off course and not receiving gift
+-Messages added: 5093
+-Lowered chances of siege engines breaking in battle by 5%
+
+12/7/2000:
+-Fix for plague spell
+
+12/6/2000:
+-Shield BloodGuard bonus is cumulative with level 1 BG protection
+-Fix for fleet counter being 1 more then actual # of ships
+-Added reset fleet command to fix the fleet counter
+
+12/3/2000:
+-Fix for troops on ships being fed/paid multiple times
+-Increased amount of MPs and peasants in the secret city
+-Added a # to troopinfo for help with formation setups
+-Misfires only occur starting with the 2nd round of combat
+
+12/2/2000:
+-Fix for crash when taking cargo during naval battle
+-Update help files for ship commands
+-Added seconds to conqs.log
+
+12/1/2000:
+-Do not put non-existant troops for a class in formation
+-Troops on ships need to be paid/fed
+-Added misfires to troops with fs; 2% chance per rank from the front line of hitting allies
+-Messages added: 2077
+
+11/30/2000:
+-Added more ship types
+-Added reset market command
+-Fix for spying on Vampire and not seeing the guise when showing surrender
+
+11/27/2000:
+-AR will not affect Orb of Negation holder
+
+11/24/2000:
+-Fix for fleet message in person/spy
+
+11/15/2000:
+-Added fleet information to person/spy
+-Messages added: 4186 4198
+
+11/10/2000:
+-Added seconds to conqd.log
+-Fix for msg 5042
+
+11/9/2000:
+-Fix for incorrect msg when using eye on a player who doesn't exist
+
+11/4/2000:
+-Warlock won't cast strength on you multiple times
+-You can't promote with the Rod
+
+10/31/2000:
+-Fix for heroes not leaving during AR if not allowed by new class
+-Renamed default mage
+
+10/30/2000:
+-Fix for Vampire's top level not being reset after death
+-Fix for display in fleet for ships with no cargo
+
+10/28/2000:
+-Fix for buy max for Vampire/Necromancer
+-Various cargo fixes for ships
+-You can now carry Renegades on ships
+-Updates to troops helping in naval battles
+-Fix for ally attacking ally message on channel
+-Fix for Master Farmer not giving any land/peasants
+-Fix for killed while trying to go Vampire message
+-Fix for buying food message
+
+10/23/2000:
+-Fix for incorrent continent msg for spells
+
+10/21/2000:
+-Fix for castle and peasant buy messages
+-Fix for Master Vampires remorting with 1 kingdom
+
+10/20/2000:
+-Your host must resolve through DNS to newplayer on Conquest through conqs
+
+10/17/2000:
+-Added log entry for Titan level players using charm
+
+10/15/2000:
+-Fix for duplicate market listings
+-Messages added: 4320
+-Fix for tornados causing negative troops/food at HK
+-Fix for being created without other person accepting
+-Fix for not having enough food to sail message
+-Fix for incorrect level reported in KINGS list
+
+10/13/2000:
+-Fix for battles reporting incorrect bonuses for attacker
+
+10/11/2000:
+-Fix for Diplomat leaving and not breaking Fighter/Ranger alliances
+
+10/8/2000:
+-Fix for Vamprie charm working for non-master Vampires
+-Made animal hordes "real" troops instead of Ranger class troops
+
+10/7/2000:
+-Fix for the "Only 1 host per HK" message
+-SEEK attempts will only reset when vampire guises
+
+10/6/2000:
+-Fix for auto-enlist
+-Damage will only carry through if the damage is greater then 4x the defense
+-Added chance of failure for summon w/o ally
+-Messages added: 16019
+
+10/4/2000:
+-Damage will carry through if one rank is wiped out
+-Fix for remote review not showing correct formation
+-Fix for default formation
+-Increased espionage chances
+-Espionage dosen't remove protection
+-MP cost of sailing is: 1 + (speed of all ships in your fleet)
+-Fix for battle damage not computed correctly
+-Added ranks to player formations
+-Player file is NOT compatiable with previous releases
+
+10/2/2000:
+-Fix for pirates destroying fleet msg
+
+10/1/2000:
+-Messages added/changed: 5055-5057 5060 5092
+-Pirates receive a fleet of 1-3 ships
+-Show enemy fleet when nbattle or pirates
+
+9/30/2000:
+-Added support for players having up to 8 ships
+-Player file is NOT compatiable with previous releases
+-Updated version to 2.52
+-Messages added/changed: most of the Continent messages
+-Fix for KIA not showing all 10 lines
+-Ranger VISION won't show BGs
+-Spy, Divination, Vision, and TrueSight show surrender and formation
+
+9/27/2000:
+-NEW Command: FORMATION
+-Player file is NOT compatiable with previous releases
+-Updated version to 2.51
+
+***** End Development for servers prior to 2.51 *****
+
+9/27/2000:
+-Fix for Hero dying message
+-Fix for secret component message
+-Added 500k money reward for killing Kraken
+-Messages added/changed: 2076 4317-4319 5090 8005 11037 11114
+
+9/25/2000:
+-Fix for Ninja msg in color (Titans only)
+-Fix for ESCAPE msg
+
+9/23/2000:
+-Reduced # of Mps per HK
+-Increased Bless and Strength commands to 10 mps
+-Bless gives +1/+1, Strength gives +2/+0
+-Bless & Strength last 1 HK
+-Messages added/changed: 3002 11113
+
+9/22/2000:
+-Messages added: 9051
+-Fix for loadship bugs
+
+9/19/2000:
+-Adjusted ship properties
+-Fix for Aegis battle message
+
+9/18/2000:
+-Fix for weather not showing temp
+
+9/17/2000:
+-Crown gives 100 troops per level: 50% soldiers, 25% archers, 25% knights
+-Fix for spy torture message
+
+9/16/2000:
+-Boots give +1 number of attacks instead of fs
+
+9/14/2000:
+-Fix for looting siege engines
+-Fix for not promoting unprotected Knights
+
+9/13/2000:
+-Include swarm ability in merc info
+
+9/12/2000:
+-You have to have > 0 peasants to generate taxes
+-Fix for clear weather message
+-Hordes get 3x # of BloodGuards in an army as Soldier class troops
+
+9/11/2000:
+-Changed Soldiers to have swarm
+-Minor market adjustments
+
+9/10/2000:
+-Added new troop ability, swarm
+-Fix for Lure format on channel
+
+9/9/2000:
+-Changed ?????? to [-closed-] if market wasn't open
+-Fic for Immortal Titans staying on rank
+-Fix for AR not giving enough castles to hold troops
+-Fix for enchant message
+-Fix for Titans using a sceptre
+-Fix for incorrect player count in info
+-Fix for channel logs
+
+9/8/2000:
+-Added class pics to conquest.classes file
+-Changed 3 of the components
+-Adjusted the MP cost of most mage spells in conquest.spells file
+-Changed format of conquest.legends file; put legends on 1 line, and
+ remove ? delimeters
+
+9/7/2000:
+-Fix for start_date not being set
+-Messages added: 1019 10049 10050
+-Fixes for setting attack and defend to 0
+-More beta server bug fixes
+
+9/6/2000:
+-Updated version: 2.50C
+-If you set both attack and defend of a troop to 0,
+ it won't appear in markets or review
+-More beta server bug fixes
+-New client and server architecture (beta)
+-Check conquest.messages file
+-Fix for Kraken regen msg
+
+***** End Development for servers prior to 2.50 *****
+
+8/30/2000:
+-Fix for Kraken regen message
+-Fix for max spy crashing server
+-Fix for Ranger tend message
+-Fix for Kraken stats not being saving
+-Lowered Kraken's max. health
+
+8/29/2000:
+-Match casualty reports to review
+-Fix for casualties using Juggernaut spell
+-Use correct names when transferring items
+-Fix for Kraken stats
+-Added Kraken health to info for 1st Emperor
+-Removed restrictions in code for Rangers having Knight troops
+ (if you still want restriction, leave Knights as 0/0)
+-Added new Ranger troop type
+-All siege engines are fs (except BatteringRams)
+-Modified Bow's bonus
+
+8/28/2000:
+-Shield doesn't attract BGs if you have Undead troops (but still gives defense bonuses)
+-More weather mod fixes
+
+8/27/2000:
+-Fix for troops having abilities < 0 (or 1)
+-Check army file while being read for bad abilities
+-Added a few more color aware commands
+-Re-formatted person
+
+8/26/2000:
+-Formatted person
+-Added castle_name, food_name, peasant_name to conf file
+-Fix for pirate names
+-Update WIN32 spell list with new spells
+
+8/25/2000:
+-Added pirate_name to conf file
+-If the Kraken is alive and you nbattle someone on a different continent, it may attack you 
+-Fix for players having Demi-god vassals
+-Fix for siege engines having < 0 defense
+
+8/24/2000:
+-Updated version: 2.32C
+-Changed colors to account for mercs
+
+8/23/2000:
+-Fix for 2 spells missing
+-Added ability to change class names (i.e. Fighter, Mage, etc) in conquest.classes file
+-Changed most references to classes to class names defined
+-Fix for Necromancer travel costing 1/2 mps
+
+8/22/2000:
+-Added LEVELS command
+-Fix for Warlock/Destroyer hero using attacks
+-Review shows troops with all bonuses
+-Surrender show in review command
+-If a hero is dead, you won't receive info on him/her from mystic
+-Vampires don't need to meet land requirements to receive a remort
+
+8/21/2000:
+-Added 2 new mage spells: portal and kraken
+-Increased rank to 10 players (only top 5 get bonus mps)
+-Grail gives all non-barb/vamp troops regen  
+-Info file is NOT compatiable with previous releases
+ (ask for conversion program)
+
+8/19/2000:
+-Added quest riddle
+-If you kill a player with remorts, you get a 25,000 copper 
+ per remort bonus
+-Info file is NOT compatiable with previous releases
+ (ask for conversion program)
+
+8/18/2000:
+-Set maximum food price to 400/200
+-Fix for ally entering battle when not on same cont
+-Added message when ally gets attacked
+-Modified troop strengths/costs
+-Fix for Undead troops costing food to sail
+
+8/17/2000:
+-Rangers can be attacked by any non-Ranger under enforce_peace
+-Troops and siege engines carried on ships help in naval battles
+
+8/16/2000:
+-Fixed bug with incremental mps
+-Increased MPs per HK
+-You can carry siege engines and Mercs on ships
+
+8/15/2000:
+-Updated version: 2.30C
+-Added message for reading each config file
+-Added conquest.classes file for race/class definitions
+-Added conquest.topics file to IRC client (conqs)
+
+8/14/2000:
+-Added autoenlist command
+-If you set surrender to 100%, you will never retreat.
+
+8/13/2000:
+-Added Quest charcters to conf file
+-Added Race names to conf file
+-Added Class titles to conf file
+-Updated GAME command with more info
+
+8/12/2000:
+-Added GAME command
+-Player file is NOT compatiable with previous releases
+-Fix for Artifacts not going to correct cities
+-Added Vampire titles
+-Made player record smaller
+
+8/11/2000:
+-Modified Wyverns to 10/9,fs
+
+8/10/2000:
+-Fix for Barbs and Vamps questing
+-Fix for weather not initializing on continents 3 or 4
+-Fix for Resurrect giving more troops then Castles allow
+-Fix for Necromancer questing for BGs
+-Weather affects food production
+-Minor production adjustments
+
+8/9/2000:
+-Fix for bot crashing at HK (when food or copper < 0)
+-Further food/peasant production tweaks
+
+8/8/2000:
+-When reset nick is used, move log and msg files to new nick
+-Added adjustable tax rate
+-Player file is NOT compatiable with previous releases
+
+8/6/2000:
+-Fix for Vampire Master releasing vassals
+
+8/5/2000:
+-Attack time added to config file
+-Added build time to start up
+-Fix for trying to hire 0 mercs
+-Added reuse parameter on socket
+-Undead troops no longer require food when sailing
+
+8/4/2000:
+-Resurrect revives 1-5% of the troops you've lost in battles
+
+8/3/2000:
+-Fix for DI
+
+8/1/2000:
+-Fix for alliances working after 1 player deleted
+-Added council help file
+
+7/31/2000:
+-Fix for animating Zombies for free
+
+7/30/2000:
+-Vampires and the Necromancer may not train Zombies
+-Vampires and the Necromancer may animate Zombies
+-You must have King land when you remort to receive experience
+-Fix for DivineIntervention working with Vampires
+-Fix for Vampire minions coming back as Vampires if Master is slain
+
+7/27/2000:
+-Fix for Vampire/Necromancer animating Castles
+
+7/26/2000:
+-Barbarian and Viking Leader give separate hordes
+
+7/24/2000:
+-Set clone's assets to 0 for charm spell
+-Fix for crash during delete_player
+-Fix for loot taking incorrect items from cities
+
+7/23/2000:
+-When you lose a remort, save battle and gender info
+-Fix for non-existent continent after remort if not fighter
+-More city market fixes
+-Clerics must be level 4+ for PENANCE to work with them
+-Fix for Vampire buying troops
+
+7/22/2000:
+-Vampire can buy their troops anywhere
+-Charm is now a 5th level spell
+
+7/21/2000:
+-Fix for vassal NYHK
+-Fix for minimum troop prices
+-Added new market pictures
+-Mage CHARM spell causes target to attack self
+-Many, many fixes to the restricted city markets
+-Fix for players attacking within 5 levels
+-Player file is NOT compatiable with previous releases
+
+7/19/2000:
+-Must be level 2 to SEEK, level 3 to SLAY
+-Restrict city markets by class
+-Added retaliation
+-Player file is NOT compatiable with previous releases
+
+7/18/2000:
+-Do not show Dark priestess name on channel
+-Modified Barbarian Tribe names
+
+7/17/2000:
+-Fix for attempted connections to master server left around
+
+7/15/2000:
+-Fix for robbers taking 0 food or copper
+-Fix for Lure showing Vampire guise
+-Fix for Lord of Chaos breaking alliance message
+
+7/14/2000:
+-Defenders get a +0/+1 bonus to all troops
+-Do not show secret city name during sieges
+-You must have 3 or more remorts to receive IRC ops
+
+7/12/2000:
+-Mercs affected by natural disasters
+-Increase copper travel limit to 1,000,000
+-Minor network tweaking
+
+7/11/2000:
+-Resolve client IPs to hostnames when accepting connection
+-Fix for BESIEGE not checking attack limits
+-Keep same side when remorting with 1 Kingdom
+
+7/10/2000:
+-Added enforce_peace to Conquest server
+-Fix for HIRE not costing 1 mp
+-Added "init_msg" to IRC client
+-Show server IP at startup
+-Only allow IRC clients to connect from same IP
+-Grab IP from all non-IRC clients for hostname check
+
+7/9/2000:
+-Fix for early remorts
+-Added map <contname> and weather <contname>
+-Fix for crash after Juggernaut spell
+
+7/8/2000:
+-Fix for AR spell
+-Updated version: 2.14C
+-Adjusted networking code
+-Fix for abdicate
+-Level 9 clerics can attempt to revive heroes
+-Heroes won't die if your army doesn't sustain any casualties
+-Updates to web site address
+-Fix for socket mismatches on validate
+-Fix for shutdown command
+-Fix for newplayer if max_player value hasn't been exceeded
+-If Knight has demoted, allow them to see petition stats
+
+7/6/2000:
+-Ensure Vampire vassals are destroyed if Master is killed
+-Fix for Vampire vassal creation after lifedrain
+-Another Fix for Vampire vassals receiving Master Vampire's guise
+
+7/5/2000:
+-Increased Barbarian loot %
+-Fix for Vampire vassals receiving Master Vampire's guise
+-Clerics attempting SLAY will lose protection.
+
+7/4/2000:
+-Fix for THUNDER command
+
+7/3/2000:
+-Remove vassals when a player class changes
+
+7/2/2000:
+-Fix for Clerics not getting horde for defense when attacked by Barbarian or Vampire
+-Rewrite of weather mod
+-Weather now affects mercs
+-Fix for equal_class function
+
+6/30/2000:
+-Bug with artifacts file fixed
+-Per-city limits on Mercs you can hire (use tavern)
+-Rangers can only SHIELD once per HK
+-Player file is NOT compatiable with previous releases
+
+6/29/2000:
+-Working on memory leak...
+
+6/28/2000:
+-Food buy prices are now half what the city sells it for
+-Maximum troops/castle fixed
+
+6/18/2000:
+-Updates to city food production
+
+6/15/2000:
+-Minor updates to server networking code
+
+6/14/2000:
+-Fixes for besiege command
+-Increased peasant defense
+-Added %DT and %DS winmsg variables
+-Fix for IRC client disconnecting from IRC
+-Added Barbarian besiege command
+-Fix for class MPs at HKs
+-Fix for long Vampire guise crash
+-Receive 3 * <num continents> bonus MPs each HK
+
+6/13/2000:
+-Vampires can't tavern
+-Fix for early abdication
+
+6/12/2000:
+-Fix for Vampires promoting at non-NYHK times
+-Fix for Vampire vassals not promoting
+-Added message to NICK command
+-Fix for gender adjectives
+-Fix for Mongols executing Titan commands
+
+6/11/2000:
+-AR respects classes set in conqd.conf file
+-Various Vampire vassal bug fixes
+-Reduced channel out put for ship battles
+-Minor battle bugs fixed
+
+6/10/2000:
+-Fix for player with experience being killed
+-Fix for crash on ninja/spy
+-Added new class symbols
+
+6/9/2000:
+-Adjusted troopinfo command
+-Fix for various class bugs
+-Fix for tithe
+-Changed promotions file
+-Fixed bug with promotion stats
+
+6/8/2000:
+-Fix for Celtic Barbarian hordes
+-Modified Barbarian and Ranger troop strengths
+-Added support for up to 4 Emperors defined
+-Added 2 new class types, Celtic and Anglan
+-Newplayers who don't vassal start on the continent of their class
+ (ie Normans start on Normandy, Saxons start on Wales, etc)
+-Fix for Vampire vassals
+-Added message to vassals when Clerics seek or attempt to slay Master Vampire
+-Player file is NOT compatiable with previous releases
+
+6/7/2000:
+-Vampires can't get robbed
+-Fix for multiple Vampires (heh-heh)
+-Put army definitions in configuration file
+-Player file is NOT compatiable with previous releases
+
+6/5/2000:
+-Added support for multiple Vampires in conqd.conf file
+-Minor bug fixes to server
+
+6/6/5000:
+-Queen of Spiders allows you to loot at any level
+-Adjusted most troops D
+-Shield gives +0/+1 to all non-mercs
+-Crown gives +2/+1 to Knights
+-Sword gives +2/+1 to Soldiers
+
+6/5/2000:
+-Fixed NICK command for IRC clients
+
+6/4/2000:
+-Fix for penancing under Titans
+-Fix for vassaling under Titans
+-Allies and hordes troops are shown
+
+5/31/2000:
+-Fix for Generals battling
+-Adjusted mage mercs
+-Destination continent after defeat fixed
+-Fix for mercenary desertions
+
+5/30/2000:
+-Added mercenary total cost to review
+-Added Titan troop types
+-Fix for spies showing BGs
+-Bugs with hordes fixed
+-Bug with ninja fixed
+-Hire costs 1 mp
+
+5/29/2000:
+-Clerics only get a barge at NYHK if their maximum level is < 3
+-Adjusted merc's attributes
+-Adjusted troop regeneration
+-Juggernaut spell increases battles won and battles lost
+-Fix for troop type and abdicating with 1 kingdom
+
+5/28/2000:
+-Made summoned creatures "real" units
+-Tweaked battle engine for more realitic damage
+
+5/27/2000:
+-Added Mercenaries
+-Fix for Amulet of Summoning
+-Added new command, troopinfo
+-Added Immortal Titans to the Titan list
+
+5/26/2000:
+-Fix for Titans on multiple continents
+-Fix for Divine Intervention
+-Turn command affects Necromancer's army
+-Bug when Necromancer leaves kingdom fixed
+-Added "troop" to reset command
+-Bug with Titans being changed by AR spell fixed
+-Bug with Level 1 Barbarians having 0 Castles after AR fixed
+
+5/25/2000:
+-Fixed IRC client crashing after server leaves
+-Fixed rare core dump for Linux server
+-Minor updates to the the help files
+
+5/24/2000:
+-Adjusted requirements for promotion for Rangers
+-Formatted troop bonuses
+-On rank if battles won are equal, then troops killed is the 
+ tie breaker
+
+5/23/2000:
+-Formatted review
+
+5/22/2000:
+-Fix for various battle bugs
+
+5/21/2000:
+-Formatted review
+-Fix for multiple entries in banned file
+-Fix for honor bug
+-Defender's ally will not enter a battle until round 2
+-Fix for changing artifact locations
+
+5/20/2000:
+-Added build time to info command
+
+5/19/2000:
+-Fix for weather command
+-Fix for multiple bugs
+-Player file is NOT compatiable with previous releases
+
+5/18/2000:
+-Fix for Tome
+-Reduced first attack to 30 minutes
+ 
+5/17/2000:
+-Fix for WIN32 server not running HKs
+-Hammer provides a Horde for Defense only (Barbarians get mighty hordes for attack)
+-Increased minimum prices for Archers, Knights, and Catapults
+-Fixed show_player command
+
+5/16/2000:
+-Minor updates to the Emperor commands
+-Adjusted show_player
+
+5/14/2000:
+-Fix for post AR troop bug
+
+5/13/2000:
+-Fix for Cleric and Vampire class change
+-Updated troop strengths
+-Fix for battle statistics
+
+5/12/2000:
+-You must wait at least 1 HK to attack/quest horde
+-Cleric must use SEEK before SLAY
+-Player file is NOT compatiable with previous releases
+
+5/11/2000:
+-Vampire charm bug fixed
+-Added troop descriptions to buy, enlist
+-Adjusted hero/artifact/item battle modifications for new system
+
+5/7/2000:
+-Fix for battles stats in view calculation
+-Fix for Barbarian horde message
+-Fix for troop types and AR spell
+-Vampire troops no longer need food
+-Catapults no longer need food
+-Fix for review
+
+5/6/2000:
+-Added number of attacks to troop abilities
+-Lord of Chaos only uses his power 50% of the time
+-Fix for reset class not adjusting troop types
+-Bonuses for army are more clear
+-Horde armies now have appropriate troop types
+(Vampire troops for Undead, Cleric troops for Crusaders, etc)
+
+5/5/2000:
+-Possible fix for IRC client crashes
+-Fix for WIN32 server not saving heroes/artifacts
+-NEW Combat System
+-Player file is NOT compatiable with previous releases
+
+5/1/2000:
+-Becoming a Vassal does not put you on the same continent as Lord
+
+4/28/2000:
+-Lord of Chaos doesn't work with the horde anymore
+-Bug in IRC client not sending certain msgs fixed
+-New pic for the Joust list
+
+4/27/2000:
+-Improved IRC client performance
+-Changed Vampire King pic
+-Added Ranger King pic
+
+4/24/2000:
+-Fix for Knight/Shield BG protection
+
+4/22/2000:
+-Fix for Eye
+-Fix for Quest BG
+-Fix for Dust/Move spell
+-Fix for IRC client not sending msgs on validate
+
+4/21/2000:
+-Fix for quest horde bug
+-Fix for Necromancer leaving
+
+4/20/2000:
+-Minor hero bug fixes
+-Added description of hero to heroinfo command
+-Player file is NOT compatiable with previous releases
+
+4/19/2000:
+-Added 3 new heroes
+
+4/18/2000:
+-Modified reset command
+-Added socket to reset command
+-Minor fixes for the server
+
+4/16/2000:
+-Fix for IRC Client DCC
+-Fix for maximum MPs
+-Fix for experience names in person/spy/ninja
+-Fix for The Shield of the Defender
+-Fix for spy markets not opening in WIN32 server
+
+4/15/2000:
+-Fix for city name in spy/ninja
+-Fix for DCC chat speed in IRC client
+
+4/14/2000:
+-Fix for giving out mps
+-Fix for Continent totals in info
+-Fix for IRC clients taking too much CPU
+-Fix for new Knights appearing in non-existant city on Scotland
+-Fix for IRC client flooding off
+-Fix for Knights not promoting correctly at NYHKs
+-Increased log display from 10 to 20 lines
+-Player file is NOT compatiable with previous releases
+
+4/13/2000:
+-Fix socket mismatch after INIT
+-Added component names to the conf file
+-Fixed rank display for > 1000 battles won
+-Increased name output to 16 chars for KIA, list
+-Minor bug fixes for the client and server
+
+4/12/2000:
+-Fix for server not responding to clients
+-Released stable IRC client
+-Minor bug fixes and tweaks in server
+
+4/9/2000:
+-Added 1 new artifact
+-Various minor bug fixes
+-Vassals can only be removed after 1 HK in Lord's service
+-Player file is NOT compatiable with previous releases
+
+4/8/2000:
+-Fixed heroes and items not being found
+-Added 5 new artifacts (thanks Vhaeraun!)
+-Fixed 2nd Emperor not being created
+-Fixed various ship bugs
+-Fixed crash when deleting players
+-Define up to 15 ships in the conquest.ships file
+-First ship no longer has to be "None"
+
+4/7/2000:
+-Rewrite of continent code
+-Define 1-4 continents and 1-64 cities in the conf file
+-Player file is NOT compatiable with previous releases
+
+4/5/2000:
+-Fixed level 1 players not promoting properly
+
+4/2/2000:
+-Added logging option to conf file
+-Fixed nonexistant player names
+
+4/1/2000:
+-Added message if end_date is set and age is nearing the end
+-Fixed check_word bug
+-Saving throw %s were backwards (ie high for Knight, low for
+ King)
+-Added promote_knights option to conf file
+-Added remove_items option to conf file
+-Can specify how many times an item is used
+ This number is also displayed in a player's item list
+ When you capture items, you get the remaining charges
+-Player file is NOT compatiable with previous releases
+
+3/31/2000:
+-Increased size of player name field from 16 to 32
+ characters
+-Minor tweaks
+
+3/30/2000:
+-Fixed socket mismatch error if client disconnects
+-Fixed last housekeeping time
+-Fixed heartbeat
+-Removed AR parameter and put in conf file
+
+3/29/2000:
+-Fixed Jasmon messages
+-Added heartbeat
+-Continent names added to config file
+-Bug with first Emperor reflecting spells fixed
+
+3/28/2000:
+-WIN32 server complete
+
+3/25/2000:
+-Major performance increases
+-Enchant spell modified for new items
+
+3/24/2000:
+-Fixed core dump on INIT
+-Partial rewrite of item code
+-Added 8 new items (thanks Vhaeraun!)
+-Added an active field to the items file
+
+3/23/2000:
+-Fixed Vampire regeneration message
+
+3/22/2000:
+-Port numbers could not be changed
+-Added message if you try to connect to port numbers < 1024

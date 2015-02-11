@@ -1,0 +1,50 @@
+Conquest version 3.0C
+copyright(c) 1993
+====================
+
+Manual and general Conquest happenings: http://www.conquestgamesite.com
+Bugs, comments, suggestions: jdb1218@hotmail.com
+
+Conquest API
+============
+
+Connect to the server (port defaults to 9999) using tcp/ip sockets.
+
+Sending and receiving to the server is done in an XML format.
+
+<?xml version="1.0"?>
+<message>
+	<type>IRC</type>
+	<user>Romulus</user>
+	<cmd>person</cmd>
+	<host>romulus@conquestgamesite.com</host>
+	<msg></msg>
+</message>
+
+The actual XML sent/received from the server consists of a single line, 
+followed by an either an ASCII 13 character(\n) for UNIX clients or an 
+ASCII 10(\r) for Windows clients.  For example:
+
+<?xml version="1.0"?><message><type>IRC</type><user>Romulus</user><cmd>person</cmd><host>romulus@conquestgamesite.com</host><msg></msg></message>\n
+
+Here is a description for each of the tags:
+<type>
+The only supported types are IRC, MUD, or WEB.  Type only restricts certain 
+operations on certain clients, like changing channel topics on IRC 
+clients only.
+<user>
+User is the object being acted upon, usually a player's name.
+<cmd>
+Command is the operation to perform.  When sending to the server, it will 
+contain the Conquest command the player wants to execute.
+<host>
+This is the hostname or IP address of the user.  The server always sends 
+its own IP when responding.
+<msg>
+This is a generic field.  When sending to the server, it will contain 
+parameters for the command being sent.  When coming from the server, it 
+will consist of: <msg #>0x10<param1>0x10<param2>0x10...\n
+There must be a 0x10 between each parameter.
+The <msg #> cooresponds to the message numbers defined in the 
+conquest.messages file.  The parameters must be inserted into the message 
+where ever there is a %s and then the constructed message sent to <user>.
